@@ -103,7 +103,7 @@ span.frac > span {display: none;}
 #nextButton1
 {
 	position:absolute;
-	left:252px;
+	left:320px;
 	top:200px;
 	cursor:pointer;
 }
@@ -136,17 +136,23 @@ span.frac > span {display: none;}
 .out{
 	border-radius:20%;
 	font-size:25px;
+	font-weight: 500;
 	color:#000000;
-	text-align:center;
+	/* text-align:center; */
 	background: #efefef;
 	border-style: groove;
-	border-color: black;
-	padding: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-left: 90px;
-	
-	
+	border: 2.5px solid black;
+	/* padding: 8px;
+	padding-left: 13px;
+	padding-right: 13px;
+	margin-left: 90px; */
+	width: 43px;
+	height: 43px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 80px;
+	margin-bottom: -10px;
 	
 }
 
@@ -155,6 +161,7 @@ span.frac > span {display: none;}
 	margin-right: 100px;
 	margin-bottom: 45px;
 	margin-top: -20px;
+	font-size:14px
 }
 
 .play-button {
@@ -168,14 +175,11 @@ span.frac > span {display: none;}
 	bottom: 60px;
 	left: 170px;
 	border: 1.5px solid black;
+	margin-top: 20px;
 	
   }
   
-  .play-button:hover {
-	/* background-color: rgba(0, 173, 239, 0.9); */
-	opacity: 0.8;
-  }
-  
+
   .play-button:after {
 	content: "";
 	display: block;
@@ -198,9 +202,9 @@ span.frac > span {display: none;}
   }
 
   
-  button:hover {
+  /* button:hover {
    opacity: 0.7;
-  }
+  } */
   
   .hidden {
 	display: none;
@@ -279,7 +283,7 @@ span.frac > span {display: none;}
 	padding-left: 10px;
 	border-radius: 15px;
 	margin: 15px;
-	margin-left: 280px;
+	margin-left: 265px;
 	cursor: pointer;
 	opacity: 0.7s;
 	margin-top: 30px;
@@ -298,6 +302,7 @@ span.frac > span {display: none;}
 .alphasel{
 	left: 30px;
 	padding-left: 160px;
+	font-size:14px
 	
 }
 
@@ -342,6 +347,9 @@ span.frac > span {display: none;}
     top: 480px;
 	background-color: #fff;
 	border-radius: 10px;
+	width: 30px;
+	height: 20px;
+
 	
 }
 
@@ -356,3 +364,73 @@ h5{
 	
 	padding: 3px;
 }
+
+#morseOutput{
+	/* margin-left: 6px; */
+	position: relative;
+	top: -6px;
+	font-size: 45px;
+	font-weight: bold;
+	letter-spacing: 5px;
+	color: black;
+	
+	
+	/* background-color: red; */
+
+}
+
+
+
+
+
+.morse-char-initial {
+	font-size: 20px; /* Set the initial font size to 20px */
+	font-weight: bold;
+	/* Other initial styling */
+	margin-right: 0.2em; /* Add some spacing between characters */
+  }
+
+.morse-dot {
+    font-size: 15px; /* Adjust the dot size as needed */
+}
+
+.morse-dash {
+    font-size: 15px; /* Adjust the dash size as needed */
+    font-weight: normal; /* Reset font weight to normal */
+}
+
+
+.size{
+    cursor: pointer;
+	/* background: #efefef; */
+    font-size: 18px;
+	font-weight: bold;
+}
+
+.square-box {
+	width: 40px; /* Adjust the width of the square box */
+	height: 40px; /* Adjust the height of the square box */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2.5px solid black; /* Add a border to the square box */
+	background: #efefef;
+	border-radius: 10px;
+	margin-top: -25px;
+	margin-left: -18px;
+	padding: 3px;
+	padding-bottom: 5px;
+  }
+
+.repeatText{
+	color: black;
+	font-size: 8px;
+	font-weight: 600;
+	margin-top: -14px;
+	margin-left: -6px;
+	padding-top: 1px;
+}
+/* .material-icons{
+	display: none;
+} */
+
