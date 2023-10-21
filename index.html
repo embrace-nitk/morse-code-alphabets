@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SOLVE</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="js/script.js"></script>
+
+<style>
+.popup
+{
+	border-radius:5px;
+	background-color:black;
+	color:white;
+	padding:5px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  left:102px;
+  visibility: hidden;
+  width: 550px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 10px 10px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 100;
+  <!-- text-align:center; -->
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+</style>
+</head>
+
+<body style="margin:0; font-family:verdana;">
+<div id="simscreen">
+<div id="title"><h3>EXPLORING MORSE CODE : ALPHABETS </h3></div>
+
+<div class="simsubscreen" id="canvas0" >
+	<h4 class="incanvas">Objective :</h4> <br> 
+	<p class="incanvas" style="font-size:14px;">To acquire the ability to receive and understand Morse code transmissions of alphabets.</p><br/>
+	
+	&nbsp;<span class="tooltip" style="border-bottom:1px ; color:black; top:20px; cursor:pointer;"><strong>Description :</strong> <br> <br>
+	<!-- <span  class="tooltiptext" style="font-size:14px; text-align:justify;">Descripton goes here</span></span> -->
+	<p class="para" style="text-align: justify; font-size: 14px;">Morse code is a method of transmitting text information as a series of on-off tones, lights, or clicks that can be directly understood by a skilled listener or observer without special equipment.
+	it is a system of dots and dashes that can be used to send messages over long distances. It was originally used by telegraph operators to send messages using electrical pulses. Radio communicators later adapted the code to use it as an auditory language.	
+	</p>
+	<p class="para" style="text-align: justify;font-size: 14px;" >Morse code can be used to send messages using Wires, Radios, Sound, Light. Messages can be sent by Tapping, Drumming, Buzzing, Clicking, or flash light. Morse code is still used today by many ham radio operators. It's a recognized mode of communication in the amateur radio community, and some operators enjoy the challenge and efficiency of using Morse code for long-distance communication. It is also used in emergency signals and in technology to help disabled people communicate.</p>
+	
+</div>
+
+
+<div class="simsubscreen" id="canvas1" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;1&nbsp;</span>
+	<p class="steptext" style="font-family: verdana;font-size: 14px";>&nbsp;Select the alphabet ranging A-Z.</p> <br><br> <br> <br>
+	<form action="" name="dropForm" class="alphasel" >
+		
+		Select the alphabet : 
+		
+		<input list="alphabetList" id="alphabetInput"  placeholder="" class="place">
+			<div class="errorText2" >
+		  <div id="errorText"  style="color: red; "></div>
+		</div>
+		<button id="nextButton1" name="submit" type="button" value="Submit" onclick="submitStepOne();displayStepTwo();message(); navNext ();getOptionDash(); getOption(); getOption1();getOption2();">Submit</button>
+		
+	</form>
+</div>
+
+
+
+<div class="simsubscreen1" id="canvas2" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;2&nbsp;</span>
+	<p class="steptext">&nbsp; Click on the play button to observe the Morse code equivalent to the alphabet entered.</p> <br><br> <br> <br>
+	<div class="main2">
+	<p class="select_alpha"> Selected alphabet : 
+		<span class="output" ></span>
+		
+		<p>
+			<div class="mainCenter">
+			<div class="">
+			<span class="out"></span>
+			<span class="outDash"></span>
+		</div>
+
+			<div class="btn-container">
+				<span id="error"></span>
+				<div class="btn2-container">
+				
+			<button  class="play-button" type="submit" id="btn2" id="controls" id="displayButton" onclick="getOption9();playMorseCode();morseCode();morseCode1();getOption2();getOption3();getOptionaud();"><h5 class="	" id="btn2">Play<span class="output2"></span></h5></button>
+			
+		
+		</div>
+	</div>
+
+</div>
+	
+		<audio id="audioA" class="aud" src="./Audio/morse a.wav"></audio>
+    	<audio id="audioB" class="aud" src="./Audio/morse b.wav"></audio>
+		<audio id="audioC" class="aud" src="./Audio/morse c.wav"></audio>
+		<audio id="audioD" class="aud" src="./Audio/morse d.wav"></audio>
+		<audio id="audioE" class="aud" src="./Audio/morse e.wav"></audio>
+		<audio id="audioF" class="aud" src="./Audio/morse f.wav"></audio>
+		<audio id="audioG" class="aud" src="./Audio/morse g.wav"></audio>
+		<audio id="audioH" class="aud" src="./Audio/morse h.wav"></audio>
+		<audio id="audioI" class="aud" src="./Audio/morse i.wav"></audio>
+		<audio id="audioJ" class="aud" src="./Audio/morse j.wav"></audio>
+		<audio id="audioK" class="aud" src="./Audio/morse k.wav"></audio>
+		<audio id="audioL" class="aud" src="./Audio/morse l.wav"></audio>
+		<audio id="audioM" class="aud" src="./Audio/morse m.wav"></audio>
+		<audio id="audioN" class="aud" src="./Audio/morse n.wav"></audio>
+		<audio id="audioO" class="aud" src="./Audio/morse o.wav"></audio>
+		<audio id="audioP" class="aud" src="./Audio/morse p.wav"></audio>
+		<audio id="audioQ" class="aud" src="./Audio/morse q.wav"></audio>
+		<audio id="audioR" class="aud" src="./Audio/morse r.wav"></audio>
+		<audio id="audioS" class="aud" src="./Audio/morse s.wav"></audio>
+		<audio id="audioT" class="aud" src="./Audio/morse t.wav"></audio>
+		<audio id="audioU" class="aud" src="./Audio/morse u.wav"></audio>
+		<audio id="audioV" class="aud" src="./Audio/morse v.wav"></audio>
+		<audio id="audioW" class="aud" src="./Audio/morse w.wav"></audio>
+		<audio id="audioX" class="aud" src="./Audio/morse x.wav"></audio>
+		<audio id="audioY" class="aud" src="./Audio/morse y.wav"></audio>
+		<audio id="audioZ" class="aud" src="./Audio/morse z.wav"></audio>
+
+		
+		</p>
+		<p class="morse-value">
+				<span class="out1" id="morse-output" style="display: none;" ></span>
+				
+				<span class="out2" id="morse-output1" >
+				
+					
+				</span>
+			</p>
+			<!-- <p id="morse-output" ></p> -->
+			<span class="message" style="color: red;">Keep audio on!</span>
+			<div id="image-container"></div>
+	</p>
+	<p id="morse-a" ></p>
+	<p id="morse-b"></p>
+	<p id="morse-d"></p>
+	<!-- <p id="morse-D"></p> -->
+
+	
+	
+	<!-- <button type="button" class="hint-btn" id="hintButton" onclick="displayHintImages()">Hint to remember</button> -->
+	
+	<!-- <button type="button" class="hint-btn" id="hintButton"  onclick="displayHintImages()">Hint to remember</button> -->
+	<div class="imageAdj">
+	<button type="button" class="hint-btn" id="hintButton" onclick="displayHintImages();playMorseCode2();hideHintButton()">Hint to remember</button>
+	</div>
+	
+	<span class="outputImg" ></span>
+	<div class="outputImg" style="display: none;"></div>
+
+	<div class="outputName">
+        <!-- Name will be displayed here -->
+    </div>
+	<div>
+	<button id="resetButton" style="display: none;" onclick="resetToStepOne(); "><img src="./restart-removebg-preview.png" alt="" class="resImg" style="height: 28px; width: 30px;"></button>
+
+</div>
+</div>
+	<div id="image-container"></div>
+
+</div>
+
+</div>
+
+<div id="nav">
+<img id="nextButton" onclick="navNext()" src="images/Next.png" />
+</div>
+
+
+<div id="copyright">
+	&copy;
+	<script>
+		document.write(new Date().getFullYear());
+	</script>
+	EMBRACE - Virtual Lab @ NITK Surathkal, Department of Water Resources &
+	Ocean Engineering
+	</div>
+</div>
+</body> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>
